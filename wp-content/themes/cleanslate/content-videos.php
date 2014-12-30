@@ -19,7 +19,7 @@
         
             while ( $video_query->have_posts() ) : $video_query->the_post();
             
-                if( $i % 3 == 0 ) :
+                if( $i % 4 == 0 ) :
                     // test for every fourth item
                     $class = 'first';
                 elseif( $i & 1 ) :
@@ -29,11 +29,11 @@
                     $class = '';
                 endif;
         ?>
-                <a href="<?php the_permalink(); ?>" class="thumb column <?php echo $class; ?>">
+                <article class="thumb column <?php echo $class; ?>">
                     <?php
                         get_template_part( 'content-thumb-square', get_post_format() );
                     ?>
-                </a>
+                </article>
         <?php
             $i++;
             endwhile;

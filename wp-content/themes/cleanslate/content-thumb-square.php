@@ -7,12 +7,7 @@
  */
 ?>
 
-<?php
-    $postCategory = get_the_category($post->ID);
-    // print_r($postCategory);
-?>
-
-<figcaption class="<?php echo $postCategory[0]->slug; ?>">
+<figcaption>
     <h4 class="post-title">
         <?php the_title(); ?>
     </h4>
@@ -21,6 +16,7 @@
 <figure class="post-thumb">
     <?php
         $thumb = get_thumbnail_custom($post->ID, 'thumbnail');
+        _log($thumb);
     ?>
     <a href="<?php the_permalink(); ?>" style="background: url('<?php echo $thumb; ?>') no-repeat 0 0;"></a>
         

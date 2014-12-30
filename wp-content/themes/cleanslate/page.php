@@ -15,11 +15,7 @@
 <?php
     if( is_page('videos') ) :
 ?>
-    <section class="primary">
-      <div class="section-inner artists-inner">
-        <h2><?php the_title(); ?></h2>
-      </div><!-- .section-inner -->
-      
+    <section id="content">
 <?php
         // Set arguments
         $args = array(

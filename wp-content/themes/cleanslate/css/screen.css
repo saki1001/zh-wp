@@ -51,31 +51,7 @@ body {
     line-height: 1;
     color: #666666;
     position: relative;
-    background: #EEEEEE url('../images/stripes-background.png') repeat 0 0;
-    -webkit-animation:myfirst 10s linear infinite; /* Safari and Chrome */
-       -moz-animation:myfirst 10s linear infinite; /* Firefox */
-         -o-animation:myfirst 10s linear infinite; /* Opera */
-            animation:myfirst 10s linear infinite;
-}
-
-@keyframes myfirst {
-    0%, 20%, 80%, 100%   {background-color:#E6E6E6;}
-    50%  {background-color:#CCCCCC;}
-}
-
-@-moz-keyframes myfirst {
-    0%, 20%, 80%, 100%   {background-color:#E6E6E6;}
-    50%  {background-color:#CCCCCC;}
-}
-
-@-webkit-keyframes myfirst {
-    0%, 20%, 80%, 100%   {background-color:#E6E6E6;}
-    50%  {background-color:#CCCCCC;}
-}
-
-@-o-keyframes myfirst {
-    0%, 20%, 80%, 100%   {background-color:#E6E6E6;}
-    50%  {background-color:#CCCCCC;}
+    background: #111111;
 }
 
 #page {
@@ -86,8 +62,7 @@ body {
     height: auto !important;
     height: 100%;
     position: relative;
-    margin: 0 auto -52px; /* the bottom margin is the negative value of the footer's height */;
-    background-color: #FFFFFF;
+    margin: 0 auto -31px; /* the bottom margin is the negative value of the footer's height */;
 }
 
 /*
@@ -96,7 +71,7 @@ http://ryanfait.com/
 */
 
 #footer, .push {
-    height: 52px; /* .push must be the same height as .footer */
+    height: 31px; /* .push must be the same height as .footer */
 }
 
 .push {
@@ -104,7 +79,6 @@ http://ryanfait.com/
     overflow: hidden; /*clearfix*/
     position: relative;
     z-index: -1;
-    background-color: #FFFFFF;
 }
 
 /* Text meant only for screen readers */
@@ -134,7 +108,7 @@ http://ryanfait.com/
 /* Links
 -------------------------------------------------------------- */
 a, a:link, a:visited {
-    color: #C9C9C9;
+    color: #111111;
     text-decoration: none;
     -webkit-transition: color .25s ease-in-out;
        -moz-transition: color .25s ease-in-out;
@@ -142,7 +116,7 @@ a, a:link, a:visited {
 }
 
 #content a, #content a:link, #content a:visited {
-    color: #83A2E5;
+    color: #666666;
     text-decoration: none;
     -webkit-transition: color .25s ease-in-out;
        -moz-transition: color .25s ease-in-out;
@@ -151,7 +125,7 @@ a, a:link, a:visited {
 
 a:active, a:hover,
 #content a:active, #content a:hover {
-    color: #666666;
+    color: blue;
     text-decoration: none;
 }
 
@@ -180,8 +154,8 @@ header {
 
 #header-container {
     width: 100%;
-    padding: 30px 0 40px;
-    background: #FFFFFF url('../images/header-border.jpg') repeat-x 0 72px;
+/*    padding: 30px 0 40px;
+    background: #FFFFFF url('../images/header-border.jpg') repeat-x 0 72px;*/
 }
 
 header #logo {
@@ -194,25 +168,28 @@ header h1 {
 
 header h1 a {
     display: block;
-    font-size: 3em;
+    font-size: 1.3em;
     font-weight: bold;
-    color: #C9C9C9;
+	background:#FFFFFF;
+	padding:20px;
+    color: #111111;
     text-transform: uppercase;
-    text-shadow: 0px 0px 0 rgb(174,174,174),-1px 0px 0 rgb(146,146,146), -2px 0px 0 rgb(119,119,119),-3px 0px 2px rgba(0,0,0,0.2),-3px 0px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
 }
 
 header h1 a:hover {
-    color: #E7A6E6;
+    color: blue;
 }
 
 /* Menu
 -------------------------------------------------------------- */
 #main-menu {
     display: block;
-    font-size: 1.9em;
+    font-size: 1.3em;
+	background: #FFFFFF;
+	padding:20px;
+	text-transform:uppercase;
     float: right;
-    margin: 10px 0 0 0;
-    float: right;
+    float: left;
 }
 
 #main-menu h3 {
@@ -304,7 +281,7 @@ header h1 a:hover {
 }
 
 #main #content .post-nav li a:hover {
-    color: #E7A6E6;
+    color: blue;
 }
 
 #main #content .post {
@@ -314,22 +291,20 @@ header h1 a:hover {
 #main #content .post .description {
     width: 22%;
 /*    max-width: 209px;*/
-    padding-right: 4%;
-    padding-bottom: 30px;
+    padding: 20px 2% 20px 2%;
     position: absolute;
     word-wrap: break-word;
-    background-color: #FFF;
     z-index: 100;
-    -webkit-box-shadow: 0px 5% 5% rgba(255, 255, 255, 0.75);
-       -moz-box-shadow: 0px 5% 5% rgba(255, 255, 255, 0.75);
-            box-shadow: 0px 5% 5% rgba(255, 255, 255, 0.75);
+	background-color:#FFFFFF;
 }
 
 #main #content .post .description .title {
-    font-size: 3em;
-    font-style: italic;
+    font-size: 1.4em;
+	font-weight:bold;
+	text-transform:uppercase;
     line-height: 1.1;
-    padding-bottom: 5px;
+	color: #111111;
+    padding-bottom: 10px;
 }
 
 /*#main #content .post .description .content img {
@@ -340,7 +315,8 @@ header h1 a:hover {
 }*/
 
 #main #content .post .description .content p {
-    font-size: 1.5em;
+    font-size: 1.2em;
+	color: #111111;
     line-height: 1.4;
     margin-bottom: 15px;
 }
@@ -372,7 +348,6 @@ header h1 a:hover {
     width: 100% !important;
     max-width: 698px !important;
     height: auto !important;
-    border: solid 1px #E6E6E6;
     margin: 0;
     padding: 0;
 }
@@ -381,7 +356,6 @@ header h1 a:hover {
 #main #content .post .media figcaption {
     font-size: 1.5em;
     line-height: 1.2;
-/*    background: #E6E6E6;*/
     text-align: right;
     padding: 15px 3%;
     position: absolute;
@@ -402,7 +376,6 @@ body.home .slideshow_container {
 
 body.home .slideshow_content {
     width: 100%;
-    background-color: #FFFFFF;
     position: absolute;
     top: -20px;
 }
@@ -452,37 +425,17 @@ body.page #main #content article figure img {
     width: 100% !important;
     max-width: 427px !important;
     height: auto !important;
-    border: solid 1px #E6E6E6;
     margin: 0;
     padding: 0;
 }
 
-body.page #main #content article figcaption {
-    width: 45%;
-    margin: 15px 0 25px;
-    font-size: 1.3em;
-    font-family: 'Arial', Helvetica, sans-serif;
-    float: right;
-}
-
 /* Category and Tags ---- Browse
 -------------------------------------------------------------- */
+body.page #main #content,
 body.category #main #content,
 body.tag #main #content {
     width: 100%;
     max-width: 950px;
-}
-
-body.category #main #content #articles,
-body.tag #main #content #articles {
-    width: 74%;
-    max-width: 703px;
-    margin-left: 26%;
-}
-
-#main #content #sidebar .tag-list li.current a {
-    color: #C9C9C9;
-    cursor: default;
 }
 
 #main #content .browse-posts {
@@ -501,9 +454,8 @@ body.tag #main #content #articles {
 }
 
 #main #content .browse-posts .thumb {
-    width: 31.5%;
+    width: 23%;
     height: 222px;
-    border: solid 1px #E6E6E6;
 }
 
 #main #content .browse-posts .thumb figure {
@@ -517,7 +469,7 @@ body.tag #main #content #articles {
     width: 100%;
     height: 100%;
     opacity: 1;
-    color: #666666;
+    color: #FFFFFF;
     -webkit-transition: opacity .35s ease-in-out;
        -moz-transition: opacity .35s ease-in-out;
             transition: opacity .35s ease-in-out;
@@ -532,24 +484,19 @@ body.tag #main #content #articles {
     opacity: 0.25;
 }
 
-body.category-web #main #content .browse-posts .thumb a:hover,
-body.category-coding #main #content .browse-posts .thumb a:hover,
-body.category-design #main #content .browse-posts .thumb a:hover {
-    opacity: 0.1;
-}
-
 #main #content .browse-posts .thumb figcaption {
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #666666;
-    background-color: #E7A6E6;
+    color: #FFFFFF;
+    background-color: blue;
     z-index: 1;
 }
 
 #main #content .browse-posts .thumb figcaption h4 {
-    font-size: 1.9em;
+    font-size: 1.3em;
     font-weight: bold;
+	text-transform:uppercase;
     padding: 8% 8% 0 8%;
 }
 
@@ -679,26 +626,23 @@ img.alignright {
 }
 
 #footer-content {
-    width: 90%;
-    padding: 10px 0;
+    padding: 0;
     margin: 0 5%;
     text-align: right;
-    border-top: solid 1px #C9C9C9;
-    background-color: #FFFFFF;
     position: relative;
     z-index: 2;
 }
 
 #footer #footer-logo {
-    width: 270px;
-    height: 31px;
-/*    background: url('../images/holland-logo.png') no-repeat 0 0;*/
+	padding:10px;
+    background-color:#FFFFFF;
+	text-transform:uppercase;
     float: right;
 }
 
 #footer #footer-logo h4 {
-    color: #999999;
+    color: #111111;
     font-size: 0.7em;
-    margin: 12px 0 0 95px;
+	font-weight:bold;
     text-align: right;
 }
