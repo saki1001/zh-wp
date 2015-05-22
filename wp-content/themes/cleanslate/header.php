@@ -76,9 +76,12 @@
                 </div>
                 
                 <nav id="main-menu" role="navigation">
+                    <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+                        <span>&larr; BACK</span>
+                    </a>
                     <?php
                         // default menu
-                        wp_nav_menu( array( 'theme_location' => 'primary' ) );
+                        // wp_nav_menu( array( 'theme_location' => 'primary' ) );
                     ?>
                 </nav>
             </div>

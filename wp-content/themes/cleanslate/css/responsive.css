@@ -1,7 +1,21 @@
 
-/*-----------------------------------------------max-width 1000-------------------------------------------------------*/
+/*-----------------------------------------------max-width 1024-------------------------------------------------------*/
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1024px){
+    /* Category
+     ------------------------------------------- */
+    #main #content .browse-posts .thumb {
+        width: 31%;
+    }
+    
+    #main #content .browse-posts .column {
+        margin: 0 3.5% 3.5% 0;
+    }
+    
+    #main #content .browse-posts .column:nth-child(3n) {
+        margin: 0 0 3.5% 0;
+    }
+
     /* Single post
      ------------------------------------------- */
     #main #content .post .media figure {
@@ -18,47 +32,16 @@
     }
 }/*/mediaquery*/
 
-/*-----------------------------------------------max-width 900-------------------------------------------------------*/
-
-
-@media screen and (max-width:900px){
-    /* Single post
-     ------------------------------------------- */
-    #main #content .post .description {
-        width: 36%;
-/*        padding-right: 4%;*/
-    }
-    
-    #main #content .post .media {
-        width: 60%;
-        margin-left: 40%;
-    }
-}/*/mediaquery*/
-
-
-/*-----------------------------------------------max-width 800-------------------------------------------------------*/
-
-@media screen and (max-width:800px){
-    /* Single post nav
-     ------------------------------------------- */
-    #main #content .post-nav li#prev-post {
-        left: -35px;
-    }
-
-    #main #content .post-nav li#next-post {
-        right: -35px;
-    }
-}/*/mediaquery*/
-
-/*-----------------------------------------------max-width 650-------------------------------------------------------*/
-@media screen and (max-width:650px){
+/*-----------------------------------------------max-width 700-------------------------------------------------------*/
+@media screen and (max-width:700px){
     /* Category
      ------------------------------------------- */
     #main #content .browse-posts .thumb {
         width: 47.5%;
     }
     
-    #main #content .browse-posts .column {
+    #main #content .browse-posts .column,
+    #main #content .browse-posts .column:nth-child(3n) {
         margin: 0 0 3% 0;
     }
     

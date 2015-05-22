@@ -13,8 +13,17 @@
         
         <?php
             if ( have_posts() ) :
-                // Homepage slideshow
-                do_action('slideshow_deploy', '22');
+
+            // Set arguments
+            $args = array(
+                'post_type' => array( 'post', 'video' ),
+                'order' =>  'ASC',
+                'posts_per_page' => -1
+            );
+            
+            // Query All Post Types
+            $post_query = new WP_Query( $args );
+            include('content-all.php');
             
             else :
             // Content Not Found Template

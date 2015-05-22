@@ -55,14 +55,33 @@ body {
 }
 
 #page {
-    width: 100%;
-    max-width: 1030px;
+    width: 94%;
+    margin:0 3%;
+    max-width: 1200px;
     min-width: 300px;
     min-height: 100%;
     height: auto !important;
     height: 100%;
     position: relative;
     margin: 0 auto -31px; /* the bottom margin is the negative value of the footer's height */;
+}
+
+header,
+#main,
+body.page #main #content,
+body.category #main #content,
+body.tag #main #content,
+#footer {
+    width:100%;
+    max-width: 1200px;
+    min-width: 300px;
+}
+
+.single header,
+.single #main,
+.single #footer {
+    max-width: 750px;
+    margin:0 auto;
 }
 
 /*
@@ -145,20 +164,15 @@ h1, h2, h3, h4, h5 {
 /* Header
 -------------------------------------------------------------- */
 header {
-    width: 90%;
-    max-width: 950px;
-    padding: 0 5%;
-    height: 100px;
-    position: relative;
+    position: relative; 
 }
 
 #header-container {
     width: 100%;
-/*    padding: 30px 0 40px;
-    background: #FFFFFF url('../images/header-border.jpg') repeat-x 0 72px;*/
 }
 
 header #logo {
+    display:none; /* hiding for now */
     float: left;
 }
 
@@ -183,13 +197,17 @@ header h1 a:hover {
 /* Menu
 -------------------------------------------------------------- */
 #main-menu {
-    display: block;
+    display: none;
     font-size: 1.3em;
 	background: #FFFFFF;
-	padding:20px;
+	padding: 10px 15px 10px 0;
 	text-transform:uppercase;
     float: right;
     float: left;
+}
+
+.single #main-menu {
+    display: block;
 }
 
 #main-menu h3 {
@@ -212,7 +230,7 @@ header h1 a:hover {
 #main-menu a {
     font-weight: bold;
     display: block;
-    margin-left: 27px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
@@ -220,9 +238,7 @@ header h1 a:hover {
 /* General
 -------------------------------------------------------------- */
 #main {
-    width: 90%;
-    max-width: 950px;
-    padding: 0 5%;
+    padding-top: 50px;
     position: relative;
 }
 
@@ -236,65 +252,16 @@ header h1 a:hover {
 
 /* Single Post General
 -------------------------------------------------------------- */
-#main #content .post-nav {
-    width: 90%;
-    max-width: 930px;
-/*    min-width: 460px;*/
-    height: 20px;
-    position: fixed;
-    z-index: 1000;
-}
-
-#main #content .post-nav li {
-    position: absolute;
-}
-
-#main #content .post-nav li#prev-post {
-    left: -40px;
-}
-
-#main #content .post-nav li#next-post {
-    right: -40px;
-}
-
-#main #content .post-nav li a {
-    font-size: 2em;
-    font-weight: bold;
-    color: #999999;
-    width: 20px;
-    height: 20px;
-    background: #FFF;
-}
-
-#main #content .post-nav li#prev-post a {
-    padding: 3px 5px 5px 5px;
-    -webkit-border-radius: 0 5px 5px 0;
-       -moz-border-radius: 0 5px 5px 0;
-            border-radius: 0 5px 5px 0;
-}
-
-#main #content .post-nav li#next-post a {
-    padding: 3px 5px 5px 5px;
-    -webkit-border-radius: 5px 0 0 5px;
-       -moz-border-radius: 5px 0 0 5px;
-            border-radius: 5px 0 0 5px;
-}
-
-#main #content .post-nav li a:hover {
-    color: blue;
-}
-
 #main #content .post {
     width: 100%;
 }
 
 #main #content .post .description {
-    width: 22%;
-/*    max-width: 209px;*/
-    padding: 20px 2% 20px 2%;
-    position: absolute;
+    width:100%;
+    max-width:710px;
+    margin:0 auto;
+    padding: 20px;
     word-wrap: break-word;
-    z-index: 100;
 	background-color:#FFFFFF;
 }
 
@@ -307,13 +274,6 @@ header h1 a:hover {
     padding-bottom: 10px;
 }
 
-/*#main #content .post .description .content img {
-    max-width: 542px;
-    border: 4px solid #000000;
-    overflow: hidden;
-    margin-bottom: 0;
-}*/
-
 #main #content .post .description .content p {
     font-size: 1.2em;
 	color: #111111;
@@ -322,15 +282,15 @@ header h1 a:hover {
 }
 
 #main #content .post .media {
-    width: 74%;
-    max-width: 703px;
-    margin-left: 26%;
+    width:100%;
+    max-width: 750px;
+    margin: 0 auto;
 }
 
 #main #content .post .media iframe {
     width: 100%;
     min-width: 300px;
-    max-width: 700px;
+    max-width: 750px;
 }
 
 #main #content .post .media figure {
@@ -346,38 +306,20 @@ header h1 a:hover {
 
 #main #content .post .media figure img {
     width: 100% !important;
-    max-width: 698px !important;
+    max-width: 750px !important;
     height: auto !important;
     margin: 0;
     padding: 0;
 }
 
-/* 35% is the 26% width of the description from within the 74% media */
 #main #content .post .media figcaption {
+    width:100%;
+    max-width:710px;
+    margin:0 auto;
     font-size: 1.5em;
     line-height: 1.2;
     text-align: right;
-    padding: 15px 3%;
-    position: absolute;
-    width: 29%;
-    left: -35%;
-    top: 0;
-}
-
-/* Home
--------------------------------------------------------------- */
-body.home .slideshow_container {
-    width: 100%;
-    margin-top: 20px;
-    padding-left: 20px;
-    background-color: #999;
-    position: relative;
-}
-
-body.home .slideshow_content {
-    width: 100%;
-    position: absolute;
-    top: -20px;
+    padding: 20px;
 }
 
 
@@ -435,7 +377,6 @@ body.page #main #content,
 body.category #main #content,
 body.tag #main #content {
     width: 100%;
-    max-width: 950px;
 }
 
 #main #content .browse-posts {
@@ -454,7 +395,7 @@ body.tag #main #content {
 }
 
 #main #content .browse-posts .thumb {
-    width: 23%;
+    width: 23.5%;
     height: 222px;
 }
 
@@ -469,7 +410,6 @@ body.tag #main #content {
     width: 100%;
     height: 100%;
     opacity: 1;
-    color: #FFFFFF;
     -webkit-transition: opacity .35s ease-in-out;
        -moz-transition: opacity .35s ease-in-out;
             transition: opacity .35s ease-in-out;
@@ -480,6 +420,15 @@ body.tag #main #content {
     z-index: 2;
 }
 
+#main #content .browse-posts .thumb.video a {
+    color:#FFFFFF;
+}
+
+#main #content .browse-posts .thumb.sculpture a,
+#main #content .browse-posts .thumb.drawing a {
+    color: #000000;
+}
+
 #main #content .browse-posts .thumb a:hover {
     opacity: 0.25;
 }
@@ -488,9 +437,19 @@ body.tag #main #content {
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #FFFFFF;
     background-color: blue;
     z-index: 1;
+}
+
+#main #content .browse-posts .thumb.video figcaption {
+    color: #FFFFFF;
+    background-color: #111111;
+}
+
+#main #content .browse-posts .thumb.sculpture figcaption,
+#main #content .browse-posts .thumb.drawing figcaption {
+    color: #000000;
+    background-color: #F4F4F4;
 }
 
 #main #content .browse-posts .thumb figcaption h4 {
@@ -498,66 +457,6 @@ body.tag #main #content {
     font-weight: bold;
 	text-transform:uppercase;
     padding: 8% 8% 0 8%;
-}
-
-
-/* Sidebar
--------------------------------------------------------------- */
-#main #sidebar {
-    max-width: 247px;
-    width: 23%;
-    padding-right: 3%;
-    position: absolute;
-}
-
-#main #sidebar h5 {
-    font-size: 2em;
-    line-height: 1.2;
-    color: #999999;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    border-bottom: solid 1px #C9C9C9;
-}
-
-#main #sidebar .tag-list li {
-    font-size: 1.6em;
-    margin-bottom: 10px;
-}
-
-
-/* Infinite Scroll Loading
--------------------------------------------------------------- */
-#main #content .pagination {
-    display: none;
-}
-
-#main #content #infscr-loading {
-    width: 100%;
-    height: 32px;
-    margin:0;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.category-news #main #content #infscr-loading {
-    width: 550px;
-}
-
-#main #content #infscr-loading img {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    left: 48%;
-}
-
-#main #content #infscr-loading div {
-    font-size: 1.4em;
-    color: #666666;
-    padding-top: 10px;
-    text-align: center;
-    font-style: italic;
 }
 
 /* Content No Found
@@ -617,9 +516,6 @@ img.alignright {
 /* Footer
 -------------------------------------------------------------- */
 #footer {
-    width: 100%;
-    max-width: 1030px;
-    min-width: 300px;
     margin: 0 auto;
     text-align: right;
     font-size: 1.6em;
@@ -627,7 +523,7 @@ img.alignright {
 
 #footer-content {
     padding: 0;
-    margin: 0 5%;
+    margin: 0 auto;
     text-align: right;
     position: relative;
     z-index: 2;

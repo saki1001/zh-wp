@@ -8,17 +8,6 @@
 ?>
 
 <div class="post">
-    <div class="description">
-        <hgroup>
-            <h2 class="title">
-                <?php the_title(); ?>
-            </h2>
-        </hgroup>
-        
-        <div class="content">
-            <?php the_content(); ?>
-        </div>
-    </div>
     
     <div class="media">
         <?php
@@ -72,6 +61,18 @@
             endforeach;
         endif;
         ?>
+    </div>
+
+    <div class="description">
+        <hgroup>
+            <h2 class="title">
+                <?php the_title(); ?>
+            </h2>
+        </hgroup>
+        
+        <div class="content">
+            <?php the_content(); ?>
+        </div>
     </div>
     
 </div>

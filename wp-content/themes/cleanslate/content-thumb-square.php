@@ -16,7 +16,6 @@
 <figure class="post-thumb">
     <?php
         $thumb = get_thumbnail_custom($post->ID, 'thumbnail');
-        _log($thumb);
     ?>
     <a href="<?php the_permalink(); ?>" style="background: url('<?php echo $thumb; ?>') no-repeat 0 0;"></a>
         

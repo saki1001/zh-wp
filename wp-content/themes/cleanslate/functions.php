@@ -55,18 +55,18 @@ if(!function_exists('_log')){
   */
  add_action( 'after_setup_theme', 'cleanslate_setup' );
 
- /**
-  * Register widgetized area and update sidebar with default widgets
-  */
+ // /**
+ //  * Register widgetized area and update sidebar with default widgets
+ //  */
 
- if ( function_exists ('register_sidebar')) { 
-     // register_sidebar( array(
-     //     'name' => __( 'cat-posts' ),
-     //     'id' => 'cat-posts'
-     // ) );
+ // if ( function_exists ('register_sidebar')) { 
+ //     // register_sidebar( array(
+ //     //     'name' => __( 'cat-posts' ),
+ //     //     'id' => 'cat-posts'
+ //     // ) );
      
-     register_sidebar();
- }
+ //     register_sidebar();
+ // }
 
 
 // Adding Jquery
